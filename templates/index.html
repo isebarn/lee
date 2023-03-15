@@ -12,7 +12,41 @@
 <tr>
 <td>{{ item.name }}</td>
 <td>{{ item.site }}</td>
-<td>{{ item.date_created }}</td>
+<td>{{ item.date_created.strftime('%Y-%m-%d %H:%M') }}</td>
 </tr>
 {% endfor %}
 </html>
+
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    
+    @media only screen and (max-width: 767px) {
+      table {
+        font-size: 14px;
+      }
+      
+      th, td {
+        padding: 8px;
+      }
+    }
+    </style>
