@@ -1,0 +1,18 @@
+<!-- table that has name, site and datetime -->
+<!-- Path: templates/index.html -->
+<html>
+<body>
+<table>
+<tr>
+<td>Name</td>
+<td>Site</td>
+<td>DateTime</td>
+</tr>
+{% for item in clicks %}
+<tr>
+<td>{{ item.name }}</td>
+<td>{{ item.site }}</td>
+<td>{{ item.date_created }}</td>
+</tr>
+{% endfor %}
+</html>
